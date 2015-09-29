@@ -13,5 +13,6 @@ repositories {
 
 dependencies {
   compile 'com.sun.jersey:jersey-core:1.19'
+  compile 'com.google.code.gson:gson:1.7.2'
   testCompile 'junit:junit:4.4'
 }

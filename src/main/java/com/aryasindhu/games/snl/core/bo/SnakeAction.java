@@ -5,9 +5,13 @@ import com.aryasindhu.games.snl.core.constants.ActionType;
 /**
  * 
  * @author aryasindhusahu@gmail.com
- *
+ * 
  */
 public class SnakeAction extends Action {
+
+	public SnakeAction(int sourceScore, int targetScore) {
+		super(sourceScore, targetScore);
+	}
 
 	@Override
 	public ActionType getActionType() {
@@ -17,7 +21,8 @@ public class SnakeAction extends Action {
 	@Override
 	public void performAction(Player player) {
 		super.performAction(player);
-		System.out.println("Player :" + player.getPlayerName() + " DOWN => " + player.getScore());
+		System.out.println("Player :" + player.getPlayerName() + " DOWN => "
+				+ player.getScore());
 	}
 
 }
