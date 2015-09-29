@@ -1,14 +1,26 @@
 package com.aryasindhu.games.snl.core.bo;
 
+import java.util.UUID;
+
 public class Player {
+
+	private String playerId = null;
+	private String playerName = null;
+	private int score = 1;
 
 	public Player(String playerName) {
 		super();
+		this.playerId = UUID.randomUUID().toString();
 		this.playerName = playerName;
 	}
 
-	private String playerName = null;
-	private int score = 1;
+	public String getPlayerId() {
+		return playerId;
+	}
+
+	public void setPlayerId(String playerId) {
+		this.playerId = playerId;
+	}
 
 	public String getPlayerName() {
 		return playerName;

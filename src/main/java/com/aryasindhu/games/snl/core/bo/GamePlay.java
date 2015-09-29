@@ -13,11 +13,10 @@ public class GamePlay {
 	private List<Player> players = null;
 	private List<Action> actions = null;
 
-	public GamePlay(int winningScore, List<Player> players,
+	public GamePlay(List<Player> players,
 			List<Action> actions) {
 		super();
 		this.gameId = UUID.randomUUID().toString();
-		this.winningScore = winningScore;
 		this.players = players;
 		this.actions = actions;
 	}
