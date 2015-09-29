@@ -1,5 +1,10 @@
 package com.aryasindhu.games.snl.core.constants;
 
+/**
+ * 
+ * @author aryasindhusahu@gmail.com
+ *
+ */
 public enum ActionType {
 
 	SNAKE(1),

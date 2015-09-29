@@ -5,6 +5,11 @@ import java.util.UUID;
 
 import com.aryasindhu.games.snl.core.constants.GameStatus;
 
+/**
+ * 
+ * @author aryasindhusahu@gmail.com
+ *
+ */
 public class GamePlay {
 
 	private String gameId = null;

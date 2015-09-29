@@ -5,6 +5,11 @@ import java.util.List;
 import com.aryasindhu.games.snl.core.bo.GamePlay;
 import com.aryasindhu.games.snl.core.bo.Player;
 
+/**
+ * 
+ * @author aryasindhusahu@gmail.com
+ *
+ */
 public interface GameInterface {
 
 	public List<Player> createPlayers(List<String> playerNames);

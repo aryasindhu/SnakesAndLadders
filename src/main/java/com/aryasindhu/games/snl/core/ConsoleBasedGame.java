@@ -7,13 +7,18 @@ import com.aryasindhu.games.snl.core.bo.GamePlay;
 import com.aryasindhu.games.snl.core.bo.Player;
 import com.aryasindhu.games.snl.core.controller.GameController;
 
+/**
+ * 
+ * @author aryasindhusahu@gmail.com
+ * 
+ */
 public class ConsoleBasedGame implements GameInterface {
 
 	@Override
 	public List<Player> createPlayers(List<String> playerNames) {
 		List<Player> players = new ArrayList<Player>(playerNames.size());
-		for(String playerName : playerNames) {
-			players.add(GameController.createPlayer(playerName));			
+		for (String playerName : playerNames) {
+			players.add(GameController.createPlayer(playerName));
 		}
 		return players;
 	}

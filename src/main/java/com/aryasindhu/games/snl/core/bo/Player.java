@@ -2,6 +2,11 @@ package com.aryasindhu.games.snl.core.bo;
 
 import java.util.UUID;
 
+/**
+ * 
+ * @author aryasindhusahu@gmail.com
+ *
+ */
 public class Player {
 
 	private String playerId = null;

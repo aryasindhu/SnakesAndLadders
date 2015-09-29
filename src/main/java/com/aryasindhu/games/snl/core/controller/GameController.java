@@ -9,6 +9,11 @@ import com.aryasindhu.games.snl.core.bo.GamePlay;
 import com.aryasindhu.games.snl.core.bo.Player;
 import com.aryasindhu.games.snl.core.util.GameUtil;
 
+/**
+ * 
+ * @author aryasindhusahu@gmail.com
+ *
+ */
 public class GameController {
 
 	private static Map<String, GamePlay> runningGames = new HashMap<String, GamePlay>();
