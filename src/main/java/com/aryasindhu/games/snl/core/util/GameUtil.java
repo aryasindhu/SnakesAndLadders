@@ -61,7 +61,7 @@ public class GameUtil {
 
 	public static int rollDice() {
 		// generate random dice value
-		return randomDiceValObj.nextInt(6 - 1) + 1;
+		return randomDiceValObj.nextInt(6) + 1;
 	}
 
 	private static Set<Integer> generateRandomActionNumbers(int quantity) {
@@ -96,27 +96,6 @@ public class GameUtil {
 					.parseInt(actionNosObj[index + totalActionSets].toString()));
 		}
 		return pairs;
-	}
-
-	public static void main(String[] args) {
-		Set<Integer> actionSets = new HashSet<Integer>();
-
-		actionSets.add(12);
-		actionSets.add(15);
-		actionSets.add(81);
-		actionSets.add(10);
-		actionSets.add(96);
-
-		actionSets.add(52);
-		actionSets.add(22);
-		actionSets.add(65);
-		actionSets.add(28);
-		actionSets.add(98);
-
-		System.out.println(actionSets);
-
-		System.out.println(createActionNoPairs(actionSets));
-
 	}
 
 }

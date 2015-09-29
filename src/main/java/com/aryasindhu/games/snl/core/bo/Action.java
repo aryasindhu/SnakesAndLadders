@@ -36,7 +36,9 @@ public abstract class Action {
 	}
 
 	public void performAction(Player player) {
+		System.out.print("Action Performed : OLD["+player.getScore()+"]");
 		player.setScore(this.targetScore);
+		System.out.print(" NEW[" + player.getScore() + "]");
 	}
 
 }

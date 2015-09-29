@@ -1,6 +1,10 @@
 package com.aryasindhu.games.snl.core.bo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
@@ -18,8 +22,10 @@ public class GamePlay {
 	private GameStatus status = GameStatus.READY;
 	private int winningScore = 100;
 	private Set<Player> players = null;
+	private Map<String, Player> playerIdPlayerMap = null;
 	private Set<Action> actions = null;
-	private Set<Integer> actionPoints = null;
+	private Map<Integer, Action> pointActionMap = null;
+	private List<String> completedPlayers = null;
 
 	public GamePlay(Set<Player> players, Set<Action> actions) {
 		super();
@@ -27,14 +33,28 @@ public class GamePlay {
 		this.players = players;
 		this.actions = actions;
 
-		actionPoints = new HashSet<Integer>(players.size());
+		completedPlayers = new ArrayList<String>(players.size());
+		playerIdPlayerMap = new HashMap<String, Player>(players.size());
+		for (Player player : players) {
+			playerIdPlayerMap.put(player.getPlayerId(), player);
+		}
+
+		pointActionMap = new HashMap<Integer, Action>(actions.size());
 		for (Action action : actions) {
-			actionPoints.add(action.getSourceScore());
+			pointActionMap.put(action.getSourceScore(), action);
 		}
 	}
 
-	public Set<Integer> getActionPoints() {
-		return actionPoints;
+	public Map<String, Player> getPlayerIdPlayerMap() {
+		return playerIdPlayerMap;
+	}
+
+	public List<String> getCompletedPlayers() {
+		return completedPlayers;
+	}
+
+	public Map<Integer, Action> getPointActionMap() {
+		return pointActionMap;
 	}
 
 	public String getGameId() {
